@@ -142,8 +142,10 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
+    redcarpet (3.2.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rouge (1.7.2)
     rspec-collection_matchers (1.0.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -204,6 +206,8 @@ DEPENDENCIES
   pg
   rails (= 4.1.6)
   rails_12factor
+  redcarpet
+  rouge
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.3)
   spring
