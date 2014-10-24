@@ -17,7 +17,9 @@ gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem 'rspec-rails', '~> 2.0'
+  gem 'quiet_assets'
+  gem 'better_errors'
 end
 
 group :test do
@@ -28,3 +30,4 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'redcarpet'
 gem 'rouge'
+gem 'protected_attributes'
