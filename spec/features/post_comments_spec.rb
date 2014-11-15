@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Posting Comments' do
   background do
-    @post = Post.create(title: 'Awesome Blog Post', body: 'Lorem ipsum dolor sit amet')
+    @post = Post.create(title: 'Awesome Blog Post', body: 'Lorem ipsum dolor sit amet', published: true)
   end
 
   # Note this scenario doesn't test the AJAX comment posting.
@@ -11,7 +11,7 @@ feature 'Posting Comments' do
 
     comment = 'This post is just filler text. Ripped off!'
 
-    fill_in 'body', with: comment
+    fill_in 'comment[body]', with: comment
     click_button 'Add comment'
 
     expect(page).to have_content comment

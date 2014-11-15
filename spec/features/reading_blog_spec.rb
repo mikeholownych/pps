@@ -13,9 +13,8 @@ feature 'Reading the Blog' do
     end
 
     scenario 'it cannot be visited directly' do
-      expect(lambda {
-        visit post_path(@post)
-      }).to raise_error(ActiveRecord::RecordNotFound)
+      visit post_path(@post)
+      expect(page).to have_content 'ActiveRecord::RecordNotFound'
     end
   end
 

@@ -10,11 +10,16 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.published.find(params[:id])
+    @post = Post.published.friendly.find(params[:id])
+    @comment = Comment.new
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
+    if request.path != post_path(@post)
+      redirect_to @post, status: :moved_permanently
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @post }
+      end
     end
   end
 end

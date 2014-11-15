@@ -1,10 +1,8 @@
-class Post < ActiveRecord::Base
+class Page < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
 
   attr_accessible :title, :body, :published, :author, :author_id
-
-  has_many :comments
 
   belongs_to :author, class_name: "AdminUser"
 

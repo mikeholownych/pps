@@ -20,6 +20,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'capybara-screenshot'
 end
 
 group :test do
@@ -31,3 +32,5 @@ gem 'devise'
 gem 'redcarpet'
 gem 'rouge'
 gem 'protected_attributes'
+gem 'friendly_id', '~> 5.0.0'
+gem 'disqus'
